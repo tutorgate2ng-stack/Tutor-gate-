@@ -4,8 +4,11 @@ from contextlib import asynccontextmanager
 import os
 
 from database import create_tables
-from routers import auth, tutors, bookings, ai_proxy, admin
-
+import auth
+import tutors
+import bookings
+import ai_proxy
+import admin
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     create_tables()
